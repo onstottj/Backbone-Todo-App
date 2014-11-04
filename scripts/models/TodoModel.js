@@ -11,7 +11,7 @@ define( ['backbone'], function ( Backbone ) {
       // Mostly for documentation, list each field that this model has
       defaults: {
          /** @type ?number */
-         priority: null,
+         priority: 3,
 
          /** @type string */
          description: "",

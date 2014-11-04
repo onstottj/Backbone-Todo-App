@@ -18,7 +18,15 @@ define( [
 
          template: Handlebars.compile( templateText ),
 
-         tagName: "tr"
+         tagName: "tr",
+
+         ui: {
+            prioritySelector: "#prioritySelector"
+         },
+
+         onRender: function () {
+
+         }
 
       } );
 
