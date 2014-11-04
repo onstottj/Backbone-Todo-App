@@ -27,7 +27,7 @@ define( [
             "change isCompleted": "render"
          },
 
-         /** Add two-way data binding from the fields on the UI to the fields in the model */
+         /** Add two-way data binding from the fields on the UI to the fields in the model.  Uses Backbone.Stickit. */
          bindings: {
             "#isCompleted": "isCompleted",
             "#description": "description",
@@ -48,6 +48,10 @@ define( [
 
          onRender: function () {
             this.stickit();
+         },
+
+         onClose: function () {
+            this.unstickit();
          }
 
       } );
