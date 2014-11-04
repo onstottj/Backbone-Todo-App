@@ -23,8 +23,3 @@ require( [ "views/TodoCompositeView"], function ( TodoCompositeView ) {
    new TodoCompositeView().render();
 
 } );
-
-// Run the Jasmine unit tests
-require( ["jasmine-tests"], function ( JasmineTests ) {
-   // The tests will run automatically now that they are loaded
-} );
