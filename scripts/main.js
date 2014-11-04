@@ -4,12 +4,8 @@
  * @author Jon Onstott
  * @since 11/1/2014
  */
-define(["views/TodoCompositeView"],function( TodoCompositeView){
+define( ["views/TodoCompositeView"], function ( TodoCompositeView ) {
 
-   // TODO
-   new TodoCompositeView( {
-      model: someModel,
-      collection: someCollection
-   } );
+   new TodoCompositeView().render();
 
-});
+} );
