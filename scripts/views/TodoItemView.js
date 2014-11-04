@@ -22,10 +22,25 @@ define( [
 
          tagName: "tr",
 
+         modelEvents: {
+            "change isCompleted": "render"
+         },
+
          bindings: {
             "#isCompleted": "isCompleted",
             "#description": "description",
-            "#prioritySelector": "priority"
+            "#prioritySelector": {
+               observe: "priority",
+               selectOptions: {
+                  collection: function () {
+                     return [
+                        {label: '1 - High', value: 1},
+                        {label: '2 - Medium', value: 2},
+                        {label: '3 - Low', value: 3}
+                     ];
+                  }
+               }
+            }
          },
 
          onRender: function () {

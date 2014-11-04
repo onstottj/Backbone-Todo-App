@@ -36,41 +36,25 @@ define( [
 
          childViewContainer: "table",
 
-         bindings: {
-            "select#sortOrderSelector": {
-               observe: "sortOrder",
-               selectOptions: {
-                  collection: function () {
-                     return [
-                        {label: 'Name', value: 'description'},
-                        {label: 'Priority', value: 'priority'}
-                     ];
-                  }
-               }
-            }
-         },
-
          events: {
-            "click #addLink": "_addItem"
-         },
+            "click #addLink": "_addItem",
 
-         modelEvents: {
-            "change:sortOrder": "_updateSortOrder"
+            "click #sortByName": function () {
+               this._sortByColumn( "description" );
+            },
+
+            "click #sortByPriority": function () {
+               this._sortByColumn( "priority" );
+            }
          },
 
          initialize: function () {
             this.model = new TodoCompositeViewModel();
 
-            this.collection = new Backbone.Collection( {
-               comparator: 'name'
-            } );
+            this.collection = new Backbone.Collection();
 
             // Add a single to-do item to start with
             this._addItem();
-         },
-
-         onRender: function () {
-            this.stickit();
          },
 
          /**
@@ -82,11 +66,11 @@ define( [
             this.collection.add( new TodoModel() );
          },
 
-         /**
-          * @private
-          */
-         _updateSortOrder: function () {
-            this.collection.comparator = this.model.get( "sortOrder" );
+         _sortByColumn: function ( column ) {
+            this.collection.comparator = column;
+            this.collection.sort();
+            // Cause the list of to-do items to be re-rendered by the Marionette CompositeView
+            this.collection.trigger( "reset" );
          }
 
       } );
