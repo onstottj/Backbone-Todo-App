@@ -33,7 +33,7 @@ define( [
          childViewContainer: "table",
 
          events: {
-            "click #addLink": "_addItem",
+            "click #addLink": "addItem",
 
             "click #sortByName": function () {
                this._sortByColumn( "description" );
@@ -48,15 +48,11 @@ define( [
             this.collection = new Backbone.Collection();
 
             // Add a single to-do item to start with
-            this._addItem();
+            this.addItem();
          },
 
-         /**
-          * Creates a new, blank to-do item.
-          *
-          * @private
-          */
-         _addItem: function () {
+         /** Creates a new, blank to-do item */
+         addItem: function () {
             this.collection.add( new TodoModel() );
          },
 
