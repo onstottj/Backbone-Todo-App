@@ -1,4 +1,6 @@
 /**
+ * Javascript unit tests written using Jasmine 2.0.
+ *
  * @author Jon Onstott
  * @since 11/4/2014
  */

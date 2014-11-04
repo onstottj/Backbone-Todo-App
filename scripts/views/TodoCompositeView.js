@@ -1,4 +1,7 @@
 /**
+ * A Marionette CompositeView which displays introductory text, the list of todo items, and some links.
+ * It contains a collection of todo items; when new todo's are added, the UI re-renders automatically.
+ *
  * @author Jon Onstott
  * @since 11/1/2014
  */

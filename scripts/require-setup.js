@@ -1,4 +1,6 @@
 /**
+ * RequireJS configuration.  Once that is set up, our TodoCompositeView is rendered in the page.
+ *
  * @author Jon Onstott
  * @since 10/5/2014
  */

@@ -1,4 +1,6 @@
 /**
+ * This is responsible for displaying a single todo item, and has a TodoModel as it's model.
+ *
  * @author Jon Onstott
  * @since 11/3/2014
  */
