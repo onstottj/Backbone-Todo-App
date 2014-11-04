@@ -1,4 +1,7 @@
 /**
+ * A Marionette CompositeView which displays introductory text, the list of todo items, and some links.
+ * It contains a collection of todo items; when new todo's are added, the UI re-renders automatically.
+ *
  * @author Jon Onstott
  * @since 11/1/2014
  */
@@ -33,7 +36,7 @@ define( [
          childViewContainer: "table",
 
          events: {
-            "click #addLink": "_addItem",
+            "click #addLink": "addItem",
 
             "click #sortByName": function () {
                this._sortByColumn( "description" );
@@ -48,15 +51,11 @@ define( [
             this.collection = new Backbone.Collection();
 
             // Add a single to-do item to start with
-            this._addItem();
+            this.addItem();
          },
 
-         /**
-          * Creates a new, blank to-do item.
-          *
-          * @private
-          */
-         _addItem: function () {
+         /** Creates a new, blank to-do item */
+         addItem: function () {
             this.collection.add( new TodoModel() );
          },
 

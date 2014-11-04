@@ -1,4 +1,6 @@
 /**
+ * This is a Backbone Model that represents a single todo item.
+ *
  * @author Jon Onstott
  * @since 11/1/2014
  */

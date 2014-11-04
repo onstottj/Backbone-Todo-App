@@ -1,4 +1,6 @@
 /**
+ * This is responsible for displaying a single todo item, and has a TodoModel as it's model.
+ *
  * @author Jon Onstott
  * @since 11/3/2014
  */
@@ -24,10 +26,17 @@ define( [
 
          modelEvents: {
             /* Causes "Completed!" to show in the UI (for some visual feedback) */
-            "change isCompleted": "render"
+            "change:isCompleted": "render"
          },
 
-         /** Add two-way data binding from the fields on the UI to the fields in the model */
+         /**
+          * Add two-way data binding from the fields on the UI to the fields in the model.
+          *
+          * This uses Backbone.Stickit.
+          *
+          * It's nice to be able to use a declarative form of programming where possible, instead of having to
+          * update the UI and model by hand.
+          */
          bindings: {
             "#isCompleted": "isCompleted",
             "#description": "description",
@@ -48,6 +57,10 @@ define( [
 
          onRender: function () {
             this.stickit();
+         },
+
+         onClose: function () {
+            this.unstickit();
          }
 
       } );
