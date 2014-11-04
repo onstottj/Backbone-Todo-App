@@ -10,16 +10,14 @@ require.config( {
       handlebars: "//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min",
       backbone: "//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min",
       marionette: "//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.2.2/backbone.marionette.min",
-      stickit: "//cdnjs.cloudflare.com/ajax/libs/backbone.stickit/0.8.0/backbone.stickit.min",
-      jasmine: "//cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine",
-      jasmineHtml: "//cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine-html",
-      jasmineBoot: "//cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/boot"
+      stickit: "//cdnjs.cloudflare.com/ajax/libs/backbone.stickit/0.8.0/backbone.stickit.min"
    }
 } );
 
 // Load the initial Backbone into the page, which is a Marionette CompositeView
-require( [ "views/TodoCompositeView"], function ( TodoCompositeView ) {
+require( [ "views/TodoCompositeView" ],
+   function ( TodoCompositeView ) {
 
-   new TodoCompositeView().render();
+      new TodoCompositeView().render();
 
-} );
+   } );
