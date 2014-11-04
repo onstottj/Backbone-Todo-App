@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head lang="en">
+      <meta charset="UTF-8">
+      <title>Backbone Todo App</title>
+
+      <!-- For running Jasmine unit tests -->
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine.css">
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine.js"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine-html.js"></script>
+      <script type="text/javascript" src="scripts/jasmine-boot.js"></script>
+   </head>
+   <body>
+      <div id="container"></div>
+
+      <hr/>
+
+      <h3>Jasmine unit test results:</h3>
+
+      <!-- Set up RequireJS -->
+      <script type="text/javascript" data-main="scripts/require-setup.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
+      <!-- Run Jasmine tests -->
+      <script type="text/javascript">
+         // To make Jasmine play well with RequireJS, we're using the approach listed here:
+         // http://blogs.lessthandot.com/index.php/webdev/uidevelopment/javascript/unit-testing-with-jasmine-2-0-and-require-js/
+         require( [ "todo-app-jasmine-tests" ], function () {
+            window.executeTests();
+         } );
+      </script>
+   </body>
+</html>
