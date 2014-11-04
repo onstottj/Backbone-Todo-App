@@ -9,7 +9,8 @@ require.config( {
       underscore: "http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.compat.min", /* A nice implementation of underscore */
       handlebars: "http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min",
       backbone: "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min",
-      marionette: "http://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.2.2/backbone.marionette.min"
+      marionette: "http://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.2.2/backbone.marionette.min",
+      stickit: "http://cdnjs.cloudflare.com/ajax/libs/backbone.stickit/0.8.0/backbone.stickit.min"
    }
 } );
 

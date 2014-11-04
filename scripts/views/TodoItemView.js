@@ -5,9 +5,11 @@
 define( [
       'marionette',
       'handlebars',
+      'stickit',
       'text!views/templates/todoItemView.hbs'],
    function ( Marionette,
               Handlebars,
+              Stickit,
               templateText ) {
 
       /**
@@ -20,12 +22,14 @@ define( [
 
          tagName: "tr",
 
-         ui: {
-            prioritySelector: "#prioritySelector"
+         bindings: {
+            "#isCompleted": "isCompleted",
+            "#description": "description",
+            "#prioritySelector": "priority"
          },
 
          onRender: function () {
-
+            this.stickit();
          }
 
       } );
