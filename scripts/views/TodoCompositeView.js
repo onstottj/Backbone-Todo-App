@@ -8,7 +8,7 @@ define( [
       'marionette',
       'handlebars',
       '../models/TodoModel',
-      'TodoItemView',
+      'views/TodoItemView',
       'text!views/templates/todoCompositeView.hbs'],
    function ( Backbone,
               Marionette,

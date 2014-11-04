@@ -5,7 +5,7 @@
 define( [
       'marionette',
       'handlebars',
-      'text!view/templates/todoItemView.hbs'],
+      'text!views/templates/todoItemView.hbs'],
    function ( Marionette,
               Handlebars,
               templateText ) {
@@ -16,7 +16,9 @@ define( [
        */
       var TodoItemView = Marionette.ItemView.extend( {
 
-         template: Handlebars.compile( templateText )
+         template: Handlebars.compile( templateText ),
+
+         tagName: "tr"
 
       } );
 
