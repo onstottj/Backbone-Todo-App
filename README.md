@@ -5,3 +5,9 @@ Accessing this through a file:// URL fails due to RequireJS and protocol relativ
 
 Handlebars (*.hbs) files need to be served as text.  If this is run in IIS, the included web.config file
 takes care of this automatically. 
+
+### Release history
+
+**1.0.0** - 11-4-2014 - *Jon Onstott*
+
+ - Initial version
