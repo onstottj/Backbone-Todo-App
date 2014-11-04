@@ -8,8 +8,6 @@ define( [
       'marionette',
       'handlebars',
       'stickit',
-      '../models/TodoCompositeViewModel',
-      '../models/SortModeModel',
       '../models/TodoModel',
       'views/TodoItemView',
       'text!views/templates/todoCompositeView.hbs'],
@@ -17,8 +15,6 @@ define( [
               Marionette,
               Handlebars,
               Stickit,
-              TodoCompositeViewModel,
-              SortModeModel,
               TodoModel,
               TodoItemView,
               templateText ) {
@@ -49,8 +45,6 @@ define( [
          },
 
          initialize: function () {
-            this.model = new TodoCompositeViewModel();
-
             this.collection = new Backbone.Collection();
 
             // Add a single to-do item to start with

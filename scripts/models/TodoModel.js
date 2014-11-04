@@ -9,10 +9,16 @@ define( ['backbone'], function ( Backbone ) {
     */
    var TodoModel = Backbone.Model.extend( {
 
-      // Mostly for documentation, list each field that this model has
+      /**
+       * The 'defaults' listed here set default values, but each field in the model should be listed here even
+       * if it doesn't need a default value (for documentation).
+       */
       defaults: {
-         /** @type ?number */
-         priority: 3,
+         /**
+          * By default, new tasks will have a priority of '2 - Medium'
+          * @type ?number
+          */
+         priority: 2,
 
          /** @type string */
          description: "",

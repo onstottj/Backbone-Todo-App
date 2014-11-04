@@ -23,9 +23,11 @@ define( [
          tagName: "tr",
 
          modelEvents: {
+            /* Causes "Completed!" to show in the UI (for some visual feedback) */
             "change isCompleted": "render"
          },
 
+         /** Add two-way data binding from the fields on the UI to the fields in the model */
          bindings: {
             "#isCompleted": "isCompleted",
             "#description": "description",
@@ -33,6 +35,7 @@ define( [
                observe: "priority",
                selectOptions: {
                   collection: function () {
+                     // The list of select items is configured here
                      return [
                         {label: '1 - High', value: 1},
                         {label: '2 - Medium', value: 2},
