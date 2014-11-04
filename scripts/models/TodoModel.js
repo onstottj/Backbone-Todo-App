@@ -1,10 +1,8 @@
 /**
- * TODO
- *
  * @author Jon Onstott
  * @since 11/1/2014
  */
-define(["backbone"],function(Backbone){
+define( ['backbone'], function ( Backbone ) {
    /**
     * @class TodoModel
     * @augments Backbone.Model
@@ -13,18 +11,17 @@ define(["backbone"],function(Backbone){
 
       // Mostly for documentation, list each field that this model has
       defaults: {
-         /**
-          * @type ?number
-          */
+         /** @type ?number */
          priority: null,
 
-         /**
-          * @type string
-          */
-         description: ""
+         /** @type string */
+         description: "",
+
+         /** @type boolean */
+         isCompleted: false
       }
 
    } );
 
    return TodoModel;
-});
+} );
